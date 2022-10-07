@@ -6,13 +6,22 @@ public class GemeWorldManager : MonoBehaviour //Singleton
 {
     [Space]
     [Header("Data Game")]
-    [SerializeField] GameConfig GameConfig;
+    [SerializeField] public GameConfig GameConfig;
 
     [Space]
-    private GameStates _gameStates;
+    private GameStates _gameStates = GameStates.None;
+
+    [Space]
+    [Header("Game Managers")]
+    [SerializeField] MoveMouse moveMouse;
+    [SerializeField] SphereGenerator sphereGenerator;
+    [SerializeField] UIManager uIManager;
     [SerializeField] public GameStates gameStates
     {
-        get { return _gameStates; }
+        get
+        { 
+            return _gameStates;
+        }
         set
         {
             if(value != _gameStates) 
@@ -24,11 +33,12 @@ public class GemeWorldManager : MonoBehaviour //Singleton
     }
 
 
-
     public static GemeWorldManager instance;
     private void Start()
     {
         instance = this;
+        SetStates(GameStates.Manu);
+        uIManager.SetScreenUI(UIManager.StateUI.Menu);
 
         if (GameConfig == null)       
             GameConfig = Resources.Load<GameConfig>("Default_GameConfig");     
@@ -50,22 +60,29 @@ public class GemeWorldManager : MonoBehaviour //Singleton
             case GameStates.Manu:
                 StartManu();
                 break;
+            case GameStates.ExitGame:
+                Application.Quit();
+                break;
         }
     }
 
     private void StartGame() 
     {
-
+        moveMouse.isMove = true;
+        sphereGenerator.GenerSphers();
     }
 
     private void StartManu()
     {
-
+        moveMouse.isMove = false;
+        sphereGenerator.ClinerSphersContener();
     }
 
     public enum GameStates 
     {
+        None,
         Manu,
         Game,
+        ExitGame,
     }
 }

@@ -3,22 +3,26 @@ using System.Collections;
 
 public class MoveMouse : MonoBehaviour
 {
-    public float SenX = 5, SensY = 10; 
+    [SerializeField] public bool isMove = false;
+
+    float SenX = 5, SensY = 10; 
     float moveY, moveX;
-    public bool RootX = true, 
+    bool RootX = true, 
     RootY = true;
     MoveMouse MyPawnBody; 
 
     private void Start()
     {
-        MyPawnBody = this;
-        Screen.lockCursor = true;
+        MyPawnBody = this;      
     } 
     private void Update()
-    {       
-        if (RootY) moveY -= Input.GetAxis("Mouse Y") * SensY;            
-        if (RootX) moveX += Input.GetAxis("Mouse X") * SenX;            
-        MyPawnBody.transform.rotation = Quaternion.Euler(moveY, moveX, 0);
+    {
+        if (isMove) 
+        {
+            if (RootY) moveY -= Input.GetAxis("Mouse Y") * SensY;
+            if (RootX) moveX += Input.GetAxis("Mouse X") * SenX;
+            MyPawnBody.transform.rotation = Quaternion.Euler(moveY, moveX, 0);
+        }       
     }
 
    /* public void OnGUI()
