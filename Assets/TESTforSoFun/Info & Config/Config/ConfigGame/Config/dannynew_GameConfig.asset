@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cafd9648a8791964c9dfe758c723cc80, type: 3}
+  m_Name: dannynew_GameConfig
+  m_EditorClassIdentifier: 
+  _nameConfig: MyConfig
+  _numberSphers: 6
+  _colors:
+  - serializedVersion: 2
+    rgba: 4285230079
+  - serializedVersion: 2
+    rgba: 4284022697
+  - serializedVersion: 2
+    rgba: 4294927872
+  - serializedVersion: 2
+    rgba: 4278244095
+  - serializedVersion: 2
+    rgba: 4294901881
+  _impulsPower: 7
