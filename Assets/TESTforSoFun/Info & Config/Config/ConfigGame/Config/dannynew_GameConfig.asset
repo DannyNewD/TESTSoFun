@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: dannynew_GameConfig
   m_EditorClassIdentifier: 
   _nameConfig: MyConfig
-  _numberSphers: 30
+  _numberSphers: 6
   _colors:
   - serializedVersion: 2
     rgba: 4285230079
