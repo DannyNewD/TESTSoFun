@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default_GameConfig
   m_EditorClassIdentifier: 
   _nameConfig: Default
-  _numberSphers: 5
+  _numberSphers: 6
   _colors:
   - serializedVersion: 2
     rgba: 4294967295
@@ -23,4 +23,4 @@ MonoBehaviour:
     rgba: 4294940672
   - serializedVersion: 2
     rgba: 4278246911
-  _impulsPower: 3
+  _impulsPower: 8
