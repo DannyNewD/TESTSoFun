@@ -16,6 +16,7 @@ public class GemeWorldManager : MonoBehaviour //Singleton
     [SerializeField] MoveMouse moveMouse;
     [SerializeField] SphereGenerator sphereGenerator;
     [SerializeField] UIManager uIManager;
+    [SerializeField] public EventManager eventManager;
     [SerializeField] public GameStates gameStates
     {
         get
@@ -31,6 +32,8 @@ public class GemeWorldManager : MonoBehaviour //Singleton
             }
         } 
     }
+
+
 
 
     public static GemeWorldManager instance;

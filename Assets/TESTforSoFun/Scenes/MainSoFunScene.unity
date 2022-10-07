@@ -2401,6 +2401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd33376f434d06f4b9f2d22221155109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SphereText: {fileID: 1511512649}
+  WallText: {fileID: 677991512}
 --- !u!1 &1697840183
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,10 +2835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8cde088c1e12642a464b96e47ba027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameConfig: {fileID: 11400000, guid: 4f6ffa22d1f2ec34f9a1c041f06503a1, type: 2}
+  GameConfig: {fileID: 11400000, guid: ca93f6d3c9c858242a62ee0af026cc1b, type: 2}
   moveMouse: {fileID: 963194229}
   sphereGenerator: {fileID: 1808500585}
   uIManager: {fileID: 1929453661}
+  eventManager: {fileID: 1652113031}
 --- !u!1 &1976294352
 GameObject:
   m_ObjectHideFlags: 0

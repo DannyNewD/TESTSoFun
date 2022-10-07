@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Space]
+    [Header("UI Element")]
+    [SerializeField] Text SphereText;
+    [SerializeField] Text WallText;
+
+    int sphere;
+    int wall;
+
+    
+
+    public void InstEvent(ref Action<string> action) 
     {
-        
+        action += GetEvent;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void GetEvent(string name) 
     {
-        
+        if (name == "Wall") 
+        {
+            wall++;
+            WallText.text = "зіткнень зі стінкою: " + wall;
+
+        }
+        if (name == "Sphere")
+        {
+            sphere++;
+            SphereText.text = "зіткнень між кулями: " + sphere / 2;
+        }
     }
 }
