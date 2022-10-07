@@ -27,13 +27,13 @@ public class EventManager : MonoBehaviour
         if (name == "Wall") 
         {
             wall++;
-            WallText.text = "зіткнень зі стінкою: " + wall;
+            WallText.text = "Зіткнень зі стінкою: " + wall;
 
         }
         if (name == "Sphere")
         {
             sphere++;
-            SphereText.text = "зіткнень між кулями: " + sphere / 2;
+            SphereText.text = "Зіткнень між кулями: " + sphere / 2;
         }
     }
 }

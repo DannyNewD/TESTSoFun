@@ -39,7 +39,7 @@ public class SphereElement : MonoBehaviour
         if(collision.gameObject.tag == "Wall") 
         {
             EventsCollisions?.Invoke("Wall");
-            Debug.Log("Wall");
+         //   Debug.Log("Wall");
             this.gameObject.GetComponent<Renderer>().material.DOColor(GemeWorldManager.instance.GameConfig.colors[Random.Range(0, GemeWorldManager.instance.GameConfig.colors.Length)], 0.3f)
                 .OnComplete(()=>
                 {
@@ -50,7 +50,7 @@ public class SphereElement : MonoBehaviour
         if(collision.gameObject.tag == "Sphere") 
         {
             EventsCollisions?.Invoke("Sphere");
-            Debug.Log("Sphere");
+           // Debug.Log("Sphere");
             var col = collision.gameObject.GetComponent<SphereElement>().corectColor;
             this.gameObject.GetComponent<Renderer>().material.DOColor(col, 0.3f)
                 .OnComplete(() =>
