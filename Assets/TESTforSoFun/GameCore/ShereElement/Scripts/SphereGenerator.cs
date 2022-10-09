@@ -16,6 +16,7 @@ public class SphereGenerator : MonoBehaviour
            
             GameObject g = prifabSphere;
             g.transform.position = new Vector3(Random.Range(-4f, 4f), Random.Range(0f, 1f), Random.Range(-4f, 4f));
+            g.gameObject.GetComponent<SphereElement>().id = i;
             Instantiate(prifabSphere, this.gameObject.transform);        
         }
         //logic gener
